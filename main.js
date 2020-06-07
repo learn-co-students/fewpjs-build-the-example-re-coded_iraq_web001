@@ -7,15 +7,18 @@ const FULL_HEART = '♥'
 const liker = document.getElementsByClassName('like-glyph')
 for (let i = 0; i< liker.length; i++){
   liker[i].addEventListener('click', function(){
+    const e=event.target;
+    console.log(mimicServerCall);
     mimicServerCall().then(res => {
+      console.log(res)
       return res
   
     }).then (data => {
       console.log(data)
-      if(data === "Pretend remote server notified of action!"){
+      if(e.innerHTML === EMPTY_HEART){
         liker[i].classList.add("activated-heart");
         liker[i].innerHTML = FULL_HEART;
-      }else if (liker[i].classList=== "activated-heart") {
+      }else {
         liker[i].classList.remove("activated-heart");
         liker[i].innerHTML = EMPTY_HEART;
       }
