@@ -1,9 +1,15 @@
 // Defining text characters for the empty and full hearts for you to use later.
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
-
+let state = false
+const modal = document.querySelector('#modal')
+console.log(modal)
 // Your JavaScript code goes here!
-
+const heartbtn = querySelectorAll('.like')
+heartbtn.forEach(btn => {
+  btn.addEventListner()
+})
+  
 
 
 
