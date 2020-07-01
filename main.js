@@ -29,8 +29,8 @@ function like(e) {
       document.getElementById("modal").className = "";
     });
 }
-for (let glyph of heart) {
-  glyph.addEventListener("click", like);
+for (let i of heart) {
+  i.addEventListener("click", like);
 }
 
 
